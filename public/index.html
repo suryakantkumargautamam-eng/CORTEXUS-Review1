@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>CORTEXUS Patient Review</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f7f8;
+      color: #1f2933;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 18px;
+      padding: 24px;
+      box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+    }
+
+    .logo-box {
+      text-align: center;
+      margin-bottom: 18px;
+    }
+
+    .logo {
+      width: 150px;
+      max-width: 70%;
+      height: auto;
+      display: inline-block;
+    }
+
+    h1 {
+      text-align: center;
+      margin: 8px 0 6px;
+      font-size: 26px;
+    }
+
+    .subtitle {
+      text-align: center;
+      color: #667085;
+      margin-bottom: 25px;
+      line-height: 1.5;
+    }
+
+    .step {
+      margin-bottom: 24px;
+    }
+
+    .step-title {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 12px;
+    }
+
+    select {
+      width: 100%;
+      padding: 14px;
+      border: 1px solid #d0d5dd;
+      border-radius: 10px;
+      font-size: 16px;
+      background: white;
+    }
+
+    .options {
+      display: grid;
+      gap: 10px;
+    }
+
+    .option {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 13px;
+      border: 1px solid #d0d5dd;
+      border-radius: 10px;
+      cursor: pointer;
+      background: #fff;
+    }
+
+    .option:hover {
+      background: #f8fafc;
+    }
+
+    .option input {
+      width: 18px;
+      height: 18px;
+    }
+
+    .language-buttons {
+      display: flex;
+      gap: 10px;
+    }
+
+    .language-buttons button {
+      flex: 1;
+      padding: 13px;
+      border-radius: 10px;
+      border: 1px solid #d0d5dd;
+      background: white;
+      cursor: pointer;
+      font-size: 15px;
+    }
+
+    .language-buttons button.active {
+      background: #111827;
+      color: white;
+      border-color: #111827;
+    }
+
+    .main-button {
+      width: 100%;
+      padding: 15px;
+      border: none;
+      border-radius: 11px;
+      background: #111827;
+      color: white;
+      font-size: 17px;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 5px;
+    }
+
+    .main-button:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    .review-box {
+      display: none;
+      margin-top: 25px;
+    }
+
+    textarea {
+      width: 100%;
+      min-height: 180px;
+      padding: 15px;
+      border: 1px solid #d0d5dd;
+      border-radius: 12px;
+      font-size: 16px;
+      line-height: 1.6;
+      resize: vertical;
+    }
+
+    .action-buttons {
+      display: grid;
+      gap: 10px;
+      margin-top: 12px;
+    }
+
+    .copy-button,
+    .google-button {
+      width: 100%;
+      padding: 14px;
+     
